@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
 function ListContacts(props){
 	return(
@@ -13,15 +13,15 @@ function ListContacts(props){
 								<p>{contact.name}</p>
 								<p>{contact.email}</p>
 							</div>
-							<button className='contact-remove'>
+							<button onClick={() => props.onDeleteContact(contact)} className='contact-remove'>
 								Remove
 							</button>
 						</li>
 
 					))}
 			</ol>
-		)
+		);
 }
 
 
-export default ListContacts
+export default ListContacts;
